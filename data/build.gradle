@@ -1,0 +1,58 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.example.data'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 24
+        targetSdk 33
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField("String", "API_TOKEN", '"3c94ea8e468645588a57cfdac40613c4"')
+            buildConfigField("String", "BASE_URL", '"https://api.football-data.org/v2/"')
+        }
+        release {
+            buildConfigField("String", "API_TOKEN", '"3c94ea8e468645588a57cfdac40613c4"')
+            buildConfigField("String", "BASE_URL", '"https://api.football-data.org/v2/"')
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation project(path: ':domain')
+    testImplementation 'junit:junit:4.13.2'
+
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+    implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
+    implementation "com.squareup.okhttp3:okhttp:$okhttp3_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3_version"
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+
+    //Gson
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+}
+
+kapt {
+    correctErrorTypes = true
+}

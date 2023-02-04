@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Premier League</string>
+    <string name="sat">Saturday</string>
+    <string name="sun">Sunday</string>
+    <string name="mon">Monday</string>
+    <string name="tue">Tuesday</string>
+    <string name="wed">Wednesday</string>
+    <string name="thu">Thursday</string>
+    <string name="fri">Friday</string>
+    <string name="unknown">Unknown</string>
+    <string name="start_at">Started At</string>
+
+    <string-array name="title_day_of_week">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+</resources>
