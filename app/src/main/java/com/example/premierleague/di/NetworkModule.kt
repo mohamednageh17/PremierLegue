@@ -1,11 +1,16 @@
-package com.example.premiumlegue.di
+package com.example.premierleague.di
 
+import android.content.Context
 import com.example.data.BuildConfig
 import com.example.data.remote.api.ApiKeyInterceptor
 import com.example.data.remote.api.LeagueAPI
+import com.example.premierleague.base.AndroidVersions
+import com.example.premierleague.utils.network_validator.NetworkValidator
+import com.example.premierleague.utils.network_validator.NetworkValidatorImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -51,4 +56,9 @@ object NetworkModule {
     @Singleton
     @Provides
     fun provideLeagueApi(retrofit: Retrofit) = retrofit.create(LeagueAPI::class.java)
+
+    @Provides
+    @Singleton
+    fun provideNetworkValidatorImpl(@ApplicationContext context: Context): NetworkValidator =
+        NetworkValidatorImpl(context, AndroidVersions())
 }

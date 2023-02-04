@@ -1,4 +1,4 @@
-package com.example.premiumlegue.base
+package com.example.premierleague.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,9 +7,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.viewbinding.ViewBinding
-import com.example.premiumlegue.R
+import com.example.premierleague.R
 
-abstract class BaseActivity<T : ViewBinding>:AppCompatActivity() {
+abstract class BaseActivity<T : ViewBinding> : AppCompatActivity() {
     private var _binding: ViewBinding? = null
     abstract val bindingInflater: (LayoutInflater) -> T
     internal var toolbar: Toolbar? = null

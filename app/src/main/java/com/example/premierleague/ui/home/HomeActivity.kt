@@ -1,4 +1,4 @@
-package com.example.premiumlegue.ui.home
+package com.example.premierleague.ui.home
 
 import android.view.LayoutInflater
 import androidx.activity.viewModels
@@ -6,9 +6,9 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import com.example.premiumlegue.base.BaseActivity
-import com.example.premiumlegue.databinding.ActivityMainBinding
-import com.example.premiumlegue.ui.home.adapters.DayAdapter
+import com.example.premierleague.base.BaseActivity
+import com.example.premierleague.databinding.ActivityMainBinding
+import com.example.premierleague.ui.home.adapters.DayAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

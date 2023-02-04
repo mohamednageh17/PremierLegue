@@ -1,108 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/bg_match_item"
-    android:padding="@dimen/padding_medium"
-    android:layout_marginTop="@dimen/margin_medium"
-    android:layout_marginBottom="@dimen/margin_medium"
     android:layout_marginStart="@dimen/margin_xlarge"
-    android:layout_marginEnd="@dimen/margin_xlarge">
+    android:layout_marginTop="@dimen/margin_medium"
+    android:layout_marginEnd="@dimen/margin_xlarge"
+    android:layout_marginBottom="@dimen/margin_medium"
+    android:background="@drawable/bg_match_item"
+    android:padding="@dimen/padding_medium">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/statusTV"
-        android:paddingStart="@dimen/padding_large"
-        android:paddingEnd="@dimen/padding_large"
-        android:textStyle="bold"
-        android:textSize="@dimen/font_medium"
-        android:textColor="@color/white"
-        android:background="@color/red"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:background="@color/red"
+        android:paddingStart="@dimen/padding_large"
+        android:paddingEnd="@dimen/padding_large"
         android:text="finished"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_medium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/dayTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
         android:text="Today"
         android:textColor="@color/white"
         android:textSize="@dimen/font_small"
         android:textStyle="bold"
-        android:layout_marginTop="@dimen/margin_medium"
-        app:layout_constraintTop_toBottomOf="@id/statusTV"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/statusTV" />
 
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/homeTeamTV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_small"
         android:text="Manchester united"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="@dimen/font_large"
         android:textStyle="bold"
-        android:layout_marginTop="@dimen/margin_small"
-        android:layout_marginStart="@dimen/margin_medium"
-        app:layout_constraintTop_toBottomOf="@id/dayTV"
+        app:layout_constraintEnd_toStartOf="@id/scoreTV"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/scoreTV"/>
+        app:layout_constraintTop_toBottomOf="@id/dayTV" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/scoreTV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
         android:text="2 - 0"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="@dimen/font_large"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="@id/homeTeamTV"
         app:layout_constraintBottom_toBottomOf="@id/homeTeamTV"
+        app:layout_constraintEnd_toStartOf="@id/awayTeamTV"
         app:layout_constraintStart_toEndOf="@id/homeTeamTV"
-        app:layout_constraintEnd_toStartOf="@id/awayTeamTV"/>
+        app:layout_constraintTop_toTopOf="@id/homeTeamTV" />
 
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/awayTeamTV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_medium"
         android:text="Manchester united"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="@dimen/font_large"
         android:textStyle="bold"
-        android:layout_marginTop="@dimen/margin_small"
-        android:layout_marginEnd="@dimen/margin_medium"
-        app:layout_constraintTop_toBottomOf="@id/dayTV"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/scoreTV"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/dayTV" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/startAtTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
         android:text="start at 17:00 pm"
         android:textColor="@color/white"
         android:textSize="@dimen/font_xx_small"
         android:textStyle="bold"
-        android:layout_marginTop="@dimen/margin_small"
-        app:layout_constraintTop_toBottomOf="@id/homeTeamTV"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/homeTeamTV" />
 
     <View
         android:id="@+id/seperateLine"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:layout_marginTop="@dimen/margin_small"
         android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_small"
         android:layout_marginEnd="@dimen/margin_large"
         android:background="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
@@ -128,13 +128,13 @@
         android:id="@+id/weekTV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_small"
         android:text="week1"
         android:textColor="@color/white"
         android:textSize="@dimen/font_small"
         android:textStyle="normal"
-        android:layout_marginEnd="@dimen/margin_small"
-        app:layout_constraintTop_toTopOf="@id/premierTV"
         app:layout_constraintBottom_toBottomOf="@id/premierTV"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/premierTV" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

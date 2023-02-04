@@ -1,12 +1,12 @@
-package com.example.premiumlegue.ui.home.adapters
+package com.example.premierleague.ui.home.adapters
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.domain.model.MatchModel
-import com.example.premiumlegue.R
-import com.example.premiumlegue.databinding.ItemMatchBinding
+import com.example.premierleague.R
+import com.example.premierleague.databinding.ItemMatchBinding
 
 object MatchStatus {
     const val FINISHED = "FINISHED"
@@ -29,7 +29,6 @@ class MatchAdapter(private val onItemClick: (item: MatchModel) -> Unit) :
                 onItemClick(dataSet[adapterPosition])
             }
         }
-
 
         fun bind(item: MatchModel) = with(viewBinding) {
             dayTV.text = item.utcDate?.substringBefore("T")

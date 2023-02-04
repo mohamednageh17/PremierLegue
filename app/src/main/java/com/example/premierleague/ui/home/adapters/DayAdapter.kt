@@ -1,12 +1,12 @@
-package com.example.premiumlegue.ui.home.adapters
+package com.example.premierleague.ui.home.adapters
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.domain.model.DisplayedMatchModel
-import com.example.premiumlegue.databinding.ItemDayBinding
-import com.example.premiumlegue.utils.getDayOfWeek
+import com.example.premierleague.databinding.ItemDayBinding
+import com.example.premierleague.utils.getDayOfWeek
 
 class DayAdapter(private val onItemClick: (item: DisplayedMatchModel) -> Unit) : RecyclerView.Adapter<DayAdapter.ViewHolder>() {
 
@@ -25,8 +25,7 @@ class DayAdapter(private val onItemClick: (item: DisplayedMatchModel) -> Unit) :
         fun bind(item: DisplayedMatchModel) = with(viewBinding) {
             dayTV.text = item.date?.substringBefore("T")?.getDayOfWeek(itemView.context, "yyyy-MM-dd")
             dateTV.text = item.date?.substringBefore("T")
-         adapter.addItems(item.matches?.toMutableList()?: mutableListOf())
-          //  adapter.addItems(mutableListOf())
+            adapter.addItems(item.matches?.toMutableList() ?: mutableListOf())
             itemsRv.adapter = adapter
         }
     }

@@ -1,4 +1,4 @@
-package com.example.premiumlegue
+package com.example.premierleague
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

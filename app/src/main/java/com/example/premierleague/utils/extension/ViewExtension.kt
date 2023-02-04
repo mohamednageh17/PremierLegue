@@ -1,12 +1,13 @@
-package com.example.premiumlegue.utils
+package com.example.premierleague.utils
 
 import android.content.Context
 import android.graphics.Paint
 import android.view.View
 import android.widget.TextView
-import com.example.premiumlegue.R
+import com.example.premierleague.R
 import java.text.SimpleDateFormat
 import java.util.*
+
 fun View.hide() {
     visibility = View.INVISIBLE
 }

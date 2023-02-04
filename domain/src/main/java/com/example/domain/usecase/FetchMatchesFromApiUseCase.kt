@@ -5,7 +5,7 @@ import com.example.domain.repository.LeagueRepository
 
 class FetchMatchesFromApiUseCase(private val repository: LeagueRepository) {
     suspend operator fun invoke(): List<DisplayedMatchModel> {
-        val matches = repository.getMatches()?.matches
+        val matches = repository.fetchMatchesFromApi()?.matches
         val list = mutableListOf<DisplayedMatchModel>()
         matches?.distinctBy {
             it.utcDate?.substringBefore("T")

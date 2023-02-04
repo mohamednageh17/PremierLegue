@@ -1,7 +1,7 @@
 <resources>
     <!-- Base application theme. -->
 
-    <style name="Theme.PremiumLegue" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.PremierLeague" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryVariant">@color/primary</item>
